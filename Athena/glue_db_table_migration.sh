@@ -13,7 +13,7 @@ createAssociatedTables () {
 }
 
 # Main script to get db in one region and create in other region.
-Associated_databases=($yourAthenaDbNmae) # you can give a single db name by replacing $yourAthenaDbNmae with your db name.
+AssociatedDatabases=($yourAthenaDbNmae) # you can give a single db name by replacing $yourAthenaDbNmae with your db name.
 #AssociatedDatabases=$(aws athena list-databases --catalog-name AwsDataCatalog | jq -r .DatabaseList[].Name) 
 for AthenaDatabase in ${AssociatedDatabases[*]}; do
 	echo "Creating DB ${AthenaDatabase} in NV region"
